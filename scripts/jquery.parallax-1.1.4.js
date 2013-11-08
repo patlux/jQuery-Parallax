@@ -1,10 +1,11 @@
 /*
 Plugin: jQuery Parallax
-Version 1.1.3
+Version 1.1.4
 Author: Ian Lunn
 Twitter: @IanLunn
 Author URL: http://www.ianlunn.co.uk/
 Plugin URL: http://www.ianlunn.co.uk/plugins/jquery-parallax/
+Fixed by ADG - Alessandro del Gobbo - http://www.adg-idea.com 
 
 Dual licensed under the MIT and GPL licenses:
 http://www.opensource.org/licenses/mit-license.php
@@ -18,12 +19,18 @@ http://www.gnu.org/licenses/gpl.html
 	$window.resize(function () {
 		windowHeight = $window.height();
 	});
+	
 
 	$.fn.parallax = function(xpos, speedFactor, outerHeight) {
 		var $this = $(this);
 		var getHeight;
 		var firstTop;
 		var paddingTop = 0;
+		
+		// setup defaults if arguments aren't specified
+		if (arguments.length < 1 || xpos === null) xpos = "50%";
+		if (arguments.length < 2 || speedFactor === null) speedFactor = 0.1;
+		if (arguments.length < 3 || outerHeight === null) outerHeight = true;
 		
 		//get the starting position of each element to have parallax applied to it		
 		$this.each(function(){
@@ -39,11 +46,7 @@ http://www.gnu.org/licenses/gpl.html
 				return jqo.height();
 			};
 		}
-			
-		// setup defaults if arguments aren't specified
-		if (arguments.length < 1 || xpos === null) xpos = "50%";
-		if (arguments.length < 2 || speedFactor === null) speedFactor = 0.1;
-		if (arguments.length < 3 || outerHeight === null) outerHeight = true;
+
 		
 		// function to be called whenever the window is scrolled or resized
 		function update(){
