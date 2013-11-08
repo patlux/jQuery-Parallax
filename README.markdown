@@ -4,7 +4,7 @@ jQuery Parallax
 jQuery Parallax is a script that simulates the parallax effect as seen on [nikebetterworld.com](http://www.nikebetterworld.com/).
 
 Plugin: jQuery Parallax  
-Version: 1.1.3
+Version: 1.1.4
 Author: [Ian Lunn](http://www.ianlunn.co.uk/)  
 Twitter: [@IanLunn](http://www.twitter.com/IanLunn)
 Demo: [jQuery Vertical Parallax Demo](http://www.ianlunn.co.uk/plugins/jquery-parallax/)  
@@ -16,6 +16,9 @@ http://www.gnu.org/licenses/gpl.html
 
 Updates
 -------
+
+08/11/2013 - Fixed parameter parsing and upgraded to jQuery 1.10.1
+Fix by [ADG - Alessandro del Gobbo](http://www.adg-idea.com)
 
 12/6/2012 - Fixed a few demo bugs and made easier to use
     - Fixed a bug that prevented the third section from working
