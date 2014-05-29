@@ -21,17 +21,17 @@ http://www.gnu.org/licenses/gpl.html
  $('#second').parallax("50%", 30, 0.1);*/
 
 (function( $ ){
-	var $window = $(window);
-	var windowHeight = $window.height();
+	var $window = $(window),
+		windowHeight = $window.height();
 
 	$window.resize(function () {
 		windowHeight = $window.height();
 	});
 
 	$.fn.parallax = function(xpos, ypos, speedFactor, outerHeight) {
-		var $this = $(this);
-		var getHeight;
-		var firstTop;
+		var $this = $(this),
+			getHeight,
+			firstTop;
 
 		// setup defaults if arguments aren't specified
 		if (arguments.length < 1 || xpos === null) xpos = "50%";
@@ -62,9 +62,9 @@ http://www.gnu.org/licenses/gpl.html
 				var pos = $window.scrollTop();				
 	
 				$this.each(function(){
-					var $element = $(this);
-					var top = $element.offset().top;
-					var height = getHeight($element);
+					var $element = $(this),
+						top = $element.offset().top,
+						height = getHeight($element);
 	
 					// Check if totally above or totally below viewport
 					if (top + height < pos || top > pos + windowHeight) {
