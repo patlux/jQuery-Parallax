@@ -22,11 +22,11 @@ http://www.gnu.org/licenses/gpl.html
 
 (function( $ ){
 	var $window = $(window),
-		windowHeight = $window.height();
+		windowHeight;
 
 	$window.resize(function () {
-		windowHeight = $window.height();
-	});
+		windowHeight = $(this).height();
+	}).triggerHandler('resize');
 
 	$.fn.parallax = function(xpos, ypos, speedFactor, outerHeight) {
 		var $this = $(this),
@@ -48,7 +48,7 @@ http://www.gnu.org/licenses/gpl.html
 				return jqo.height();
 			};
 		}
-		
+
 		//get the starting position of each element to have parallax applied to it	
 		function update (){
 			var pos = $window.scrollTop();
@@ -67,9 +67,8 @@ http://www.gnu.org/licenses/gpl.html
 
 				$this.css('backgroundPosition', xpos + " " + Math.round(ypos + (firstTop - pos) * speedFactor) + "px");
 			});
-		}		
+		}
 
-		$window.bind('scroll resize', update);
-		update();
+		$window.bind('scroll resize', update).triggerHandler('scroll');
 	};
 })(jQuery);
