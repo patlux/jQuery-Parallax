@@ -49,8 +49,8 @@ http://www.gnu.org/licenses/gpl.html
 			};
 		}
 
-		//get the starting position of each element to have parallax applied to it	
-		function update (){
+		//get the starting position of each element to have parallax applied to it
+		$window.bind('scroll resize', function (){
 			var pos = $window.scrollTop();
 
 			$this.each(function(){
@@ -67,8 +67,6 @@ http://www.gnu.org/licenses/gpl.html
 
 				$this.css('backgroundPosition', xpos + " " + Math.round(ypos + (firstTop - pos) * speedFactor) + "px");
 			});
-		}
-
-		$window.bind('scroll resize', update).triggerHandler('scroll');
+		}).triggerHandler('scroll');
 	};
 })(jQuery);
