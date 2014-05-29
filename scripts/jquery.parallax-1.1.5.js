@@ -32,7 +32,6 @@ http://www.gnu.org/licenses/gpl.html
 		var $this = $(this);
 		var getHeight;
 		var firstTop;
-		var paddingTop = 0;
 
 		// setup defaults if arguments aren't specified
 		if (arguments.length < 1 || xpos === null) xpos = "50%";
