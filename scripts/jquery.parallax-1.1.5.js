@@ -34,10 +34,10 @@ http://www.gnu.org/licenses/gpl.html
 			firstTop;
 
 		// setup defaults if arguments aren't specified
-		if (arguments.length < 1 || xpos === null) xpos = "50%";
-        if (arguments.length < 2 || ypos === null) ypos = 0;
-		if (arguments.length < 3 || speedFactor === null) speedFactor = 0.5;
-		if (arguments.length < 4 || outerHeight === null) outerHeight = true;
+		xpos = xpos || "50%";
+		ypos = ypos || 0;
+		speedFactor = speedFactor || 0.5;
+		outerHeight = outerHeight || true;
 
 		if (outerHeight) {
 			getHeight = function(jqo) {
