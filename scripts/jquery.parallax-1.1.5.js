@@ -37,7 +37,10 @@ http://www.gnu.org/licenses/gpl.html
 		xpos = xpos || "50%";
 		ypos = ypos || 0;
 		speedFactor = speedFactor || 0.5;
-		outerHeight = outerHeight || true;
+
+		if (typeof outerHeight === 'undefined')  {
+			outerHeight = true;
+		}
 
 		if (outerHeight) {
 			getHeight = function(jqo) {
