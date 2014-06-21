@@ -24,7 +24,7 @@ http://www.gnu.org/licenses/gpl.html
 	var $window = $(window),
 		windowHeight = $window.height();
 
-	$window.resize(function () {
+	$window.bind('resize', function () {
 		windowHeight = $(this).height();
 	});
 
