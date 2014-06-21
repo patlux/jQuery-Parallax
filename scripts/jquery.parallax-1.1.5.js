@@ -22,11 +22,11 @@ http://www.gnu.org/licenses/gpl.html
 
 (function( $ ){
 	var $window = $(window),
-		windowHeight;
+		windowHeight = $window.height();
 
 	$window.resize(function () {
 		windowHeight = $(this).height();
-	}).triggerHandler('resize');
+	});
 
 	$.fn.parallax = function(xpos, ypos, speedFactor, outerHeight) {
 		var $this = $(this),
