@@ -1,5 +1,5 @@
 {
-  "name": "jquery-parallax",
+  "name": "jquery-parallax-custom",
   "version": "1.1.3",
   "main": "scripts/jquery.parallax.js",
   "dependencies": {

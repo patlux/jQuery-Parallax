@@ -1,7 +1,7 @@
 /*
  Plugin: jQuery Parallax
  Version 1.1.5
- Author: ADG Idea Alessandro del Gobbo (based on code of Ian Lunn)
+ Author: ADG Idea Alessandro del Gobbo (based on code of Ian Lunn) :: Alex Vauch! custom edition -_-
  Twitter: @alexoverflow
  Author URL: http://www.adg-idea.com/
  Project on GitHub: https://github.com/aledelgo/jQuery-Parallax
