@@ -71,9 +71,6 @@
 			};
 		}
 
-		//get the starting position of each element to have parallax applied to it
-		setElementsBackgroundPosition(this, params);
-
-		$window.bind('scroll resize', setElementsBackgroundPosition.bind(null, this, params));
+		$window.bind('scroll resize load', setElementsBackgroundPosition.bind(null, this, params));
 	};
 })(jQuery);
